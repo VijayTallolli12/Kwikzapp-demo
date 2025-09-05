@@ -36,11 +36,11 @@ const ChargingUtilizationTable = () => {
         <table className="min-w-full divide-y divide-gray-200">
           <thead>
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 md:text-sm  tracking-wider">Reg. Number</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 md:text-sm  tracking-wider">Registration Number</th>
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 md:text-sm  tracking-wider">Status</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 md:text-sm  tracking-wider">Last Charged</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 md:text-sm  tracking-wider">Location</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 md:text-sm  tracking-wider">Sessions</th>
+              <th className="px-6 py-3 text-xs font-medium text-center text-gray-500 md:text-sm  tracking-wider">Last Charged</th>
+              <th className="px-6 py-3 text-xs font-medium text-center text-gray-500 md:text-sm  tracking-wider">Location Name</th>
+              <th className="px-6 py-3 text-xs font-medium text-right text-gray-500 md:text-sm  tracking-wider">Number of Sessions</th>
             </tr>
           </thead>
           <tbody className="bg-white divide-y divide-gray-200">
@@ -50,9 +50,9 @@ const ChargingUtilizationTable = () => {
                 <td className="px-6 py-4 whitespace-nowrap text-sm">
                   {getStatusBadge(item.status)}
                 </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{item.lastCharged}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{item.location}</td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700">{item.sessions}</td>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-center text-sm text-gray-700">{item.lastCharged}</td>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-center text-sm text-gray-700">{item.location}</td>
+                <td className="px-6 py-4 whitespace-nowrap font-medium text-right text-sm text-gray-700">{item.sessions}</td>
               </tr>
             ))}
           </tbody>
